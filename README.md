@@ -13,13 +13,15 @@ No corporate fluff, no fake 10x claims — just a curious builder reading kernel
 ### 🛠️ What I'm Building & Tinkering With
 
 * **[Kurogane (黒鉄)](https://github.com/devpryan7792/kurogane)** — An experimental Linux appliance engine and static micro-supervisor (`kurogane-init`) written in Rust. Compiles workloads into read-only EROFS images with zero-allocation pre-exec sandboxing, decoupled Wayland mediation (`cage` + `seatd`), and cold boots in under 1.8 seconds in QEMU.
-  * 🌐 **Interactive Portal**: [is.gd/kurogane](https://is.gd/kurogane)
+  * 🌐 **Interactive Portal**: [devpryan7792.github.io/kurogane](https://devpryan7792.github.io/kurogane/)
   * *Active trade-off*: Prioritizing extreme boot speed and immutability over general-purpose package management.
 
 * **[ChronoDB](https://github.com/devpryan7792/chronodb)** — An embedded append-only time-travel storage engine in Rust.
   * Explores 4 KiB CRC32-C verified pages, memory-mapped (`mmap`) zero-copy reads, and crash-safe writes for sub-microsecond point-in-time (`as-of`) entity queries.
 
-* **[Kaze-OS](https://github.com/devpryan7792/kaze-os)** — A modular Arch Linux build engine experimenting with three hyper-focused Wayland OS flavors (Hayate for gaming, Kasumi for desktop ricing, and Nagomi for daily work).
+* **[Kaze-OS](https://github.com/devpryan7792/kaze-os)** *(Phase 1 Lab)* — A modular Arch Linux build engine experimenting with three hyper-focused Wayland OS flavors (Hayate for gaming, Kasumi for desktop ricing, and Nagomi for daily work).
+  * 🌐 **Interactive Portal**: [devpryan7792.github.io/kaze-os](https://devpryan7792.github.io/kaze-os/)
+  * *Status*: Phase 1 architecture & profile assembly; ISO builds and package mirrors in active refinement.
 
 * **[hyprquickshell](https://github.com/devpryan7792/hyprquickshell)** — My active daily driver desktop environment. Arch Linux + Hyprland powered by Quickshell, Qt6/QML, and dynamic Matugen Material You theming with GPU autodetect and turnkey automation.
 
