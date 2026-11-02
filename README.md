@@ -1,12 +1,8 @@
-### Hi, I'm Pradyumn (`@devpryan7792`)
+<div align="center">
+  <img src="https://raw.githubusercontent.com/devpryan7792/devpryan7792/main/banner.svg" alt="Pradyumn Jha — Systems & Linux Workbench" width="100%" />
+</div>
 
-```text
-  ┌────────────────────────────────────────────────────────────────────────┐
-  │  SYSTEM : x86_64 / Linux 6.x                                           │
-  │  STACK  : Rust · Wayland / Hyprland · EROFS · QEMU / KVM · TypeScript  │
-  │  STATUS : Tinkering with kernel-userspace boundaries & micro-runtimes  │
-  └────────────────────────────────────────────────────────────────────────┘
-```
+<br />
 
 I spend most of my time tinkering with operating system plumbing, trying to understand how things work under the hood when you strip away bloated layers: bootloaders, init systems, Wayland compositors, and immutable filesystems. 
 
@@ -15,15 +11,6 @@ No corporate fluff, no fake 10x claims — just a curious builder reading kernel
 ---
 
 ### 🛠️ What I'm Building & Tinkering With
-
-```
-  ┌─────────────────┐       ┌─────────────────┐       ┌─────────────────┐
-  │   kurogane-init │ ----> │  Wayland / cage │ ----> │ immutable root  │
-  │   (static Rust) │       │ (seatd mediate) │       │ (lz4hc12 EROFS) │
-  └─────────────────┘       └─────────────────┘       └─────────────────┘
-           │                         │                         │
-           └─────────────────── sub-1.8s cold boot ────────────┘
-```
 
 * **[Kurogane (黒鉄)](https://github.com/devpryan7792/kurogane)** — An experimental Linux appliance engine and static micro-supervisor (`kurogane-init`) written in Rust. Compiles workloads into read-only EROFS images with zero-allocation pre-exec sandboxing, decoupled Wayland mediation (`cage` + `seatd`), and cold boots in under 1.8 seconds in QEMU.
   * 🌐 **Interactive Portal**: [is.gd/kurogane](https://is.gd/kurogane)
