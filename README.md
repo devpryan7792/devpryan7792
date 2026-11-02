@@ -1,76 +1,40 @@
-<div align="center">
-  <img src="https://raw.githubusercontent.com/devpryan7792/devpryan7792/main/banner.svg" alt="Pradyumn Jha — Systems & Linux Workbench" width="100%" />
-</div>
+Hey, I'm Pradyumn. I build low-level systems, Linux appliances, and explore graphics engines.
 
-<br />
-
-I spend most of my time tinkering with operating system plumbing, trying to understand how things work under the hood when you strip away bloated layers: bootloaders, init systems, Wayland compositors, and immutable filesystems. 
-
-No corporate fluff, no fake 10x claims — just a curious builder reading kernel docs, writing small micro-supervisors, and breaking/fixing Linux environments under QEMU.
+Most of my time goes into experimenting with operating system plumbing: boot paths, static init supervisors, Wayland compositor internals, and immutable filesystems.
 
 ---
 
-### 🛠️ What I'm Building & Tinkering With
+### Projects
 
-* **[Kurogane (黒鉄)](https://github.com/devpryan7792/kurogane)** — An experimental Linux appliance engine and static micro-supervisor (`kurogane-init`) written in Rust. Compiles workloads into read-only EROFS images with zero-allocation pre-exec sandboxing, decoupled Wayland mediation (`cage` + `seatd`), and cold boots in under 1.8 seconds in QEMU.
-  * 🌐 **Interactive Portal**: [devpryan7792.github.io/kurogane](https://devpryan7792.github.io/kurogane/)
-  * *Active trade-off*: Prioritizing extreme boot speed and immutability over general-purpose package management.
-
-* **[ChronoDB](https://github.com/devpryan7792/chronodb)** — An embedded append-only time-travel storage engine in Rust.
-  * Explores 4 KiB CRC32-C verified pages, memory-mapped (`mmap`) zero-copy reads, and crash-safe writes for sub-microsecond point-in-time (`as-of`) entity queries.
-
-* **[Kaze-OS](https://github.com/devpryan7792/kaze-os)** *(Phase 1 Lab)* — A modular Arch Linux build engine experimenting with three hyper-focused Wayland OS flavors (Hayate for gaming, Kasumi for desktop ricing, and Nagomi for daily work).
-  * 🌐 **Interactive Portal**: [devpryan7792.github.io/kaze-os](https://devpryan7792.github.io/kaze-os/)
-  * *Status*: Phase 1 architecture & profile assembly; ISO builds and package mirrors in active refinement.
-
-* **[hyprquickshell](https://github.com/devpryan7792/hyprquickshell)** — My active daily driver desktop environment. Arch Linux + Hyprland powered by Quickshell, Qt6/QML, and dynamic Matugen Material You theming with GPU autodetect and turnkey automation.
-
-* **[Saknussemm](https://github.com/devpryan7792/saknussemm)** — A creative 2.5D scroll-driven subterranean exploration web engine inspired by Jules Verne.
-  * Features custom volumetric lighting (god rays), normal-mapped rock strata with dynamic normal vectors, and WebGL fluid distortion shaders.
+* **[kurogane](https://github.com/devpryan7792/kurogane)** (`Rust`) — Static micro-supervisor (`kurogane-init`) and immutable Linux appliance engine. Packages workloads into compressed, read-only EROFS images (`lz4hc,12`) with decoupled Wayland mediation (`cage` + `seatd`) and zero-allocation pre-exec sandboxing. Boots under 1.8s in QEMU. Live portal at [is.gd/kurogane](https://is.gd/kurogane).
+* **[chronodb](https://github.com/devpryan7792/chronodb)** (`Rust`) — Embedded append-only storage engine. Memory-mapped zero-copy reads, CRC32-C verified pages, crash-safe writes, and sub-microsecond point-in-time (`as-of`) entity queries.
+* **[hyprquickshell](https://github.com/devpryan7792/hyprquickshell)** (`QML`, `Shell`) — Daily driver desktop setup. Arch Linux + Hyprland interface built on Quickshell and Qt6/QML, with Matugen dynamic theming and turnkey automation.
+* **[kaze-os](https://github.com/devpryan7792/kaze-os)** (`Shell`) — Modular Arch Linux build engine generating specialized Wayland desktop flavors (Hayate, Kasumi, Nagomi).
+* **[saknussemm](https://github.com/devpryan7792/saknussemm)** (`JavaScript`, `GLSL`) — Scroll-driven subterranean web journey honoring Jules Verne. Custom 2.5D volumetric light beams (god rays), normal-mapped rock strata, and WebGL fluid distortion shaders.
+* **[impulse3d](https://github.com/devpryan7792/impulse3d)** (`TypeScript`) — Zero-dependency 3D rigid-body physics engine with an interactive Three.js playground.
 
 ---
 
-### 🔍 Upstream OSS Explorations
+### Upstream Contributions
 
-When I run into bugs or odd behavior in tools I use, I try to dig into the source and open patches upstream:
+Patches and bug fixes I've submitted to tools in my daily workflow:
 
-* **[hyprwm/hyprlock#1091](https://github.com/hyprwm/hyprlock/pull/1091)**: Defer auth initialization until the Wayland session lock is safely acquired.
-* **[python/cpython#159081](https://github.com/python/cpython/pull/159081)**: Correct `UnicodeDecodeError` offsets in the `utf-8-sig` codec when input starts with a BOM.
-* **[astral-sh/ruff#29810](https://github.com/astral-sh/ruff/pull/29810)**: Fix parser logic to avoid treating relative imports from `__future__` as future imports.
-* **[janbjorge/pgqueuer#954](https://github.com/janbjorge/pgqueuer/pull/954)** *(Merged)*: Refactor driver to remove unused `tm` properties.
-* **[oxpull/django-ox#149](https://github.com/oxpull/django-ox/pull/149)** *(Merged)*: Add `ox_retry` and `ox_discard` CLI commands.
-* Other explorations in `hyprwm/Hyprland`, `hyprwm/hypridle`, `psycopg`, `advanced-alchemy`, and `Cap`.
-
----
-
-### 💻 Tooling & Daily Environment
-
-<p align="left">
-  <img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white" alt="Rust" />
-  <img src="https://img.shields.io/badge/Linux_Kernel-1793d1?style=for-the-badge&logo=linux&logoColor=white" alt="Linux" />
-  <img src="https://img.shields.io/badge/Wayland-00599C?style=for-the-badge&logo=wayland&logoColor=white" alt="Wayland" />
-  <img src="https://img.shields.io/badge/Hyprland-00a88f?style=for-the-badge&logo=hyprland&logoColor=white" alt="Hyprland" />
-  <img src="https://img.shields.io/badge/Arch_Linux-1793d1?style=for-the-badge&logo=archlinux&logoColor=white" alt="Arch Linux" />
-  <img src="https://img.shields.io/badge/QEMU%2FKVM-FF6600?style=for-the-badge&logo=qemu&logoColor=white" alt="QEMU" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-</p>
+* **[hyprwm/hyprlock#1091](https://github.com/hyprwm/hyprlock/pull/1091)** — Defers auth initialization until the session lock surface is acquired.
+* **[python/cpython#159081](https://github.com/python/cpython/pull/159081)** — Corrects `UnicodeDecodeError` byte offsets in `utf-8-sig` when input has a BOM.
+* **[astral-sh/ruff#29810](https://github.com/astral-sh/ruff/pull/29810)** — Fixes parser bug treating relative imports from `__future__` as future imports.
+* **[janbjorge/pgqueuer#954](https://github.com/janbjorge/pgqueuer/pull/954)** *(Merged)* — Driver refactor removing unused task manager ports.
+* **[oxpull/django-ox#149](https://github.com/oxpull/django-ox/pull/149)** *(Merged)* — Adds `ox_retry` and `ox_discard` CLI commands.
+* Other work in `hyprwm/Hyprland`, `hyprwm/hypridle`, `psycopg`, and `Cap`.
 
 ---
 
-### 📊 Activity & Telemetry
+<details>
+  <summary>Environment</summary>
+  <br>
 
-<div align="center">
-  <a href="https://github.com/devpryan7792">
-    <img src="https://github-readme-stats.vercel.app/api?username=devpryan7792&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=79c0ff&text_color=c9d1d9" alt="GitHub Stats" width="48%" />
-  </a>
-  <a href="https://github.com/devpryan7792">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=devpryan7792&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9" alt="Top Languages" width="48%" />
-  </a>
-</div>
-
-<br>
-
-<div align="center">
-  <sub>Constructed with zero fluff. Always testing in QEMU.</sub>
-</div>
+  - **OS**: Arch Linux
+  - **Compositor**: Hyprland
+  - **Terminal**: Ghostty
+  - **Languages**: Rust, C/C++, TypeScript, Python, Shell
+  - **Virtualization & Testing**: QEMU / KVM
+</details>
