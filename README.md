@@ -19,12 +19,19 @@ Most of my time goes into experimenting with operating system plumbing: boot pat
 
 Patches and bug fixes I've submitted to tools in my daily workflow:
 
+#### Merged
 * **[hyprwm/hyprlock#1091](https://github.com/hyprwm/hyprlock/pull/1091)** — Defers auth initialization until the session lock surface is acquired.
+* **[hyprwm/hypridle#212](https://github.com/hyprwm/hypridle/pull/212)** — Uses generic `kbd_backlight` device in example configuration.
+* **[litestar-org/advanced-alchemy#834](https://github.com/litestar-org/advanced-alchemy/pull/834)** — Classifies DuckDB integrity errors by native error type.
+* **[janbjorge/pgqueuer#954](https://github.com/janbjorge/pgqueuer/pull/954)** — Driver refactor removing unused `tm` property and task manager ports.
+* **[oxpull/django-ox#149](https://github.com/oxpull/django-ox/pull/149)** — Adds `ox_retry` and `ox_discard` CLI commands.
+
+#### In Review & Ongoing
 * **[python/cpython#159081](https://github.com/python/cpython/pull/159081)** — Corrects `UnicodeDecodeError` byte offsets in `utf-8-sig` when input has a BOM.
-* **[astral-sh/ruff#29810](https://github.com/astral-sh/ruff/pull/29810)** — Fixes parser bug treating relative imports from `__future__` as future imports.
-* **[janbjorge/pgqueuer#954](https://github.com/janbjorge/pgqueuer/pull/954)** *(Merged)* — Driver refactor removing unused task manager ports.
-* **[oxpull/django-ox#149](https://github.com/oxpull/django-ox/pull/149)** *(Merged)* — Adds `ox_retry` and `ox_discard` CLI commands.
-* Other work in `hyprwm/Hyprland`, `hyprwm/hypridle`, `psycopg`, and `Cap`.
+* **[CapSoftware/Cap#3534](https://github.com/CapSoftware/Cap/pull/3534)** — Resolves PipeWire system audio routing timeout on Linux.
+* **[litestar-org/advanced-alchemy#833](https://github.com/litestar-org/advanced-alchemy/pull/833)** — Prevents filter dependency collisions in merged service bundles.
+* **[simonw/sqlite-utils#917](https://github.com/simonw/sqlite-utils/pull/917)** — Migrates deprecated `CliRunner.isolated_filesystem` to `tmp_path`.
+* Other explorations in `hyprwm/Hyprland`, `astral-sh/ruff`, and `psycopg`.
 
 ---
 
